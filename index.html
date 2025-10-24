@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML Kurz - Přehled hodin</title>
+    <title>HTML Kurz - Hlavní stránka</title>
+    <link rel="stylesheet" href="summary/shared-style.css" />
     <style>
       * {
         margin: 0;
@@ -148,12 +149,44 @@
   </head>
   <body>
     <div class="container">
+      <nav class="top-nav">
+        <a href="#" class="nav-btn active">🏠 Domů</a>
+        <a href="hodina1/index.html" class="nav-btn">📄 Hodina 1</a>
+        <a href="hodina2/index.html" class="nav-btn">📄 Hodina 2</a>
+        <a href="summary/hodina1.html" class="nav-btn">📚 Summary 1</a>
+        <a href="summary/hodina2.html" class="nav-btn">📚 Summary 2</a>
+      </nav>
+
       <header>
-        <h1>HTML Kurz</h1>
+        <h1>🌐 HTML Kurz</h1>
         <p class="subtitle">
-          Kompletní přehled všech hodin a jejich sumarizací
+          Vítej v HTML kurzu! Vyber si lekci nebo si prohlédni přehled všech
+          hodin
         </p>
       </header>
+
+      <div class="download-section">
+        <h3>📥 Rychlý přístup k materiálům</h3>
+        <p>
+          Stáhni si jednotlivé hodiny pro offline studium nebo si prohlédni
+          sumarizace online
+        </p>
+        <div class="buttons">
+          <a
+            href="hodina1/index.html"
+            download="hodina1.html"
+            class="btn btn-download"
+            >⬇️ Hodina 1</a
+          >
+          <a
+            href="hodina2/index.html"
+            download="hodina2.html"
+            class="btn btn-download"
+            >⬇️ Hodina 2</a
+          >
+        </div>
+      </div>
+
       <div class="lessons-grid">
         <div class="lesson-card">
           <div class="lesson-number">1</div>
@@ -170,8 +203,9 @@
             <li>Speciální znaky</li>
           </ul>
           <div class="buttons">
-            <a href="hodina1.html" class="btn btn-summary"> Sumarizace</a
-            ><a href="../hodina1/index.html" class="btn btn-lesson"> Hodina</a>
+            <a href="summary/hodina1.html" class="btn btn-summary">
+              Sumarizace</a
+            ><a href="hodina1/index.html" class="btn btn-lesson"> Hodina</a>
           </div>
         </div>
         <div class="lesson-card">
@@ -189,8 +223,9 @@
             <li>Seznamy (ul, li)</li>
           </ul>
           <div class="buttons">
-            <a href="hodina2.html" class="btn btn-summary"> Sumarizace</a
-            ><a href="../hodina2/index.html" class="btn btn-lesson"> Hodina</a>
+            <a href="summary/hodina2.html" class="btn btn-summary">
+              Sumarizace</a
+            ><a href="hodina2/index.html" class="btn btn-lesson"> Hodina</a>
           </div>
         </div>
         <div class="lesson-card coming-soon">
