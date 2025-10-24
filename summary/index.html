@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Kurz - Přehled hodin</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: Segoe UI, sans-serif;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        padding: 20px;
+      }
+      .container {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+      header {
+        text-align: center;
+        color: white;
+        margin-bottom: 40px;
+        padding: 40px 20px;
+      }
+      h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      .subtitle {
+        font-size: 1.2em;
+        opacity: 0.9;
+      }
+      .lessons-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin-bottom: 30px;
+      }
+      .lesson-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+      .lesson-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+      }
+      .lesson-number {
+        display: inline-block;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        line-height: 50px;
+        text-align: center;
+        font-size: 1.5em;
+        font-weight: bold;
+        margin-bottom: 15px;
+      }
+      .lesson-title {
+        font-size: 1.5em;
+        color: #333;
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
+      .lesson-description {
+        color: #666;
+        margin-bottom: 20px;
+        line-height: 1.6;
+      }
+      .lesson-topics {
+        list-style: none;
+        margin-bottom: 20px;
+      }
+      .lesson-topics li {
+        padding: 5px 0;
+        color: #555;
+      }
+      .lesson-topics li:before {
+        content: " ";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+      .buttons {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+      }
+      .btn {
+        padding: 10px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s;
+        display: inline-block;
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+      }
+      .btn-summary {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+      }
+      .btn-summary:hover {
+        opacity: 0.9;
+        transform: scale(1.05);
+      }
+      .btn-lesson {
+        background: #f0f0f0;
+        color: #333;
+        border: 2px solid #ddd;
+      }
+      .btn-lesson:hover {
+        background: #e0e0e0;
+        border-color: #ccc;
+      }
+      footer {
+        text-align: center;
+        color: white;
+        margin-top: 40px;
+        padding: 20px;
+        opacity: 0.9;
+      }
+      .coming-soon {
+        opacity: 0.6;
+        pointer-events: none;
+      }
+      .coming-soon-badge {
+        display: inline-block;
+        background: #ffc107;
+        color: #333;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.8em;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>HTML Kurz</h1>
+        <p class="subtitle">
+          Kompletní přehled všech hodin a jejich sumarizací
+        </p>
+      </header>
+      <div class="lessons-grid">
+        <div class="lesson-card">
+          <div class="lesson-number">1</div>
+          <h2 class="lesson-title">První hodina HTML</h2>
+          <p class="lesson-description">
+            Základy HTML - značky, nadpisy, obrázky a odkazy
+          </p>
+          <ul class="lesson-topics">
+            <li>Nadpisy (h1-h6)</li>
+            <li>Obrázky a atributy</li>
+            <li>Odkazy (a href)</li>
+            <li>Odstavce a zalomení</li>
+            <li>Barvy a styly</li>
+            <li>Speciální znaky</li>
+          </ul>
+          <div class="buttons">
+            <a href="hodina1.html" class="btn btn-summary"> Sumarizace</a
+            ><a href="../hodina1/index.html" class="btn btn-lesson"> Hodina</a>
+          </div>
+        </div>
+        <div class="lesson-card">
+          <div class="lesson-number">2</div>
+          <h2 class="lesson-title">Druhá hodina HTML</h2>
+          <p class="lesson-description">
+            CSS styly, třídy a kontextové selektory
+          </p>
+          <ul class="lesson-topics">
+            <li>CSS styly v HTML</li>
+            <li>CSS třídy (.class)</li>
+            <li>Kontextové selektory</li>
+            <li>RGB barvy</li>
+            <li>Kontejnery (div)</li>
+            <li>Seznamy (ul, li)</li>
+          </ul>
+          <div class="buttons">
+            <a href="hodina2.html" class="btn btn-summary"> Sumarizace</a
+            ><a href="../hodina2/index.html" class="btn btn-lesson"> Hodina</a>
+          </div>
+        </div>
+        <div class="lesson-card coming-soon">
+          <div class="lesson-number">3</div>
+          <h2 class="lesson-title">
+            Třetí hodina <span class="coming-soon-badge">Připravuje se</span>
+          </h2>
+          <p class="lesson-description">
+            Další lekce budou přidány postupně...
+          </p>
+          <ul class="lesson-topics">
+            <li>Obsah bude doplněn</li>
+            <li>Po další hodině</li>
+          </ul>
+          <div class="buttons">
+            <a href="#" class="btn btn-summary"> Brzy</a
+            ><a href="#" class="btn btn-lesson"> Brzy</a>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p>2025 | HTML Kurz - Gymnázium Havlíčkův Brod</p>
+        <p style="font-size: 0.9em; margin-top: 10px">
+          Vytvořeno s pro výuku HTML a CSS
+        </p>
+      </footer>
+    </div>
+  </body>
+</html>
