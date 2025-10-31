@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hodina 3 – GitHub a Copilot pro začátečníky</title>
+  <style>
+    :root {
+      --primary: #667eea;
+      --primary-dark: #4e5fd4;
+      --bg: #f7f7fb;
+      --text: #2b2b3a;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: linear-gradient(135deg, #6b66d8, #8a5bd9);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 36px 16px 56px;
+    }
+    .card {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0 14px 34px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
+    header {
+      padding: 28px 28px 18px;
+      border-bottom: 1px solid rgba(102,126,234,0.25);
+      background: rgba(255,255,255,0.96);
+    }
+    header h1 { margin: 0 0 8px; color: #2d2470; font-size: 1.9rem; }
+    header p { margin: 0; color: #514a86; line-height: 1.55; }
+    nav { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+    nav a {
+      text-decoration: none; color: white; background: var(--primary);
+      padding: 8px 16px; border-radius: 999px; font-weight: 600;
+      transition: transform .15s ease, box-shadow .15s ease, background .2s;
+    }
+    nav a:hover { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 8px 18px rgba(102,126,234,.35); }
+    main { padding: 24px 28px; background: var(--bg); }
+    section { background: white; border: 1px solid #ececf6; border-radius: 14px; padding: 18px 20px; margin: 18px 0; }
+    section h2 { margin: 0 0 8px; color: #2d2470; font-size: 1.35rem; }
+    section p { margin: 10px 0; line-height: 1.65; }
+    ul, ol { margin: 8px 0 10px; padding-left: 22px; }
+    .tip { background: #fff9d6; border-left: 4px solid #f0c14b; border-radius: 10px; padding: 12px 14px; color: #3d391f; }
+    .code { background: #111826; color: #f2f2f7; border-radius: 10px; padding: 12px 14px; overflow-x: auto; font-family: Consolas, "Fira Code", ui-monospace, monospace; font-size: .95rem; }
+    .grid { display: grid; gap: 14px; grid-template-columns: repeat(2, minmax(0,1fr)); }
+    @media (max-width: 760px) { .grid { grid-template-columns: 1fr; } }
+    footer { padding: 18px 28px; border-top: 1px solid rgba(102,126,234,0.25); background: rgba(255,255,255,0.96); color: #544f84; font-size: .95rem; }
+    .btn-secondary { text-decoration: none; color: var(--primary-dark); font-weight: 600; }
+  </style>
+  <!-- Poznámka: Stránka je záměrně jednoduchá, aby byla přehledná pro začátečníky. -->
+  <!-- Vše funguje čistě v HTML/CSS. Žádný JavaScript není potřeba. -->
+  <!-- Windows PowerShell příkazy jsou uvedeny jako volitelné. -->
+  
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <header>
+        <h1>Hodina 3: GitHub a Copilot – od nuly k prvnímu pushi</h1>
+        <p>
+          Dnes se naučíme, co je GitHub, proč se hodí, jak si založit účet a jak ve Visual Studio Code zapnout GitHub Copilot.
+          Nakonec si zkusíme stránku z minulé hodiny trochu zkrášlit s pomocí Copilota a uložit ji do repozitáře na GitHubu.
+        </p>
+        <nav>
+          <a href="../index.html">🏠 Zpět na hlavní stránku</a>
+          <a href="../hodina1/index.html">📘 Hodina 1</a>
+          <a href="../hodina2/index.html">📗 Hodina 2</a>
+        </nav>
+      </header>
+
+      <main>
+        <section>
+          <h2>1) Co je Git a GitHub (rychle a jednoduše)</h2>
+          <ul>
+            <li><strong>Git</strong> = nástroj na verzování (historie souborů, návrat v čase, větve).</li>
+            <li><strong>GitHub</strong> = web, kde můžeš své projekty s Gitem bezpečně ukládat, sdílet a spolupracovat.</li>
+            <li>Repozitář (repo) je složka s projektem + historie změn.</li>
+            <li>Push = nahrát změny z počítače na GitHub. Pull = stáhnout změny z GitHubu k sobě.</li>
+          </ul>
+          <div class="tip"><strong>Proč to chtít?</strong> Záloha, spolupráce, přehled o změnách a možnost ukázat svou práci světu.</div>
+        </section>
+
+        <section>
+          <h2>2) Založení účtu na GitHubu</h2>
+          <ol>
+            <li>Otevři <a class="btn-secondary" href="https://github.com/" target="_blank" rel="noopener">github.com</a>.</li>
+            <li>Klikni na <em>Sign up</em> a projdi rychlou registrací (e‑mail, heslo, přezdívka).</li>
+            <li>Potvrď e‑mail a přihlas se. Hotovo!</li>
+          </ol>
+        </section>
+
+        <section>
+          <h2>3) Přihlášení do GitHubu ve VS Code + instalace Copilota</h2>
+          <div class="grid">
+            <div>
+              <h3 style="margin:6px 0">VS Code a přihlášení</h3>
+              <ol>
+                <li>Spusť VS Code.</li>
+                <li>V levém spodním rohu klikni na <strong>Accounts</strong> (ikona panáčka) → <em>Sign in with GitHub</em>.</li>
+                <li>Potvrď v prohlížeči. Po návratu do VS Code budeš přihlášen/a.</li>
+              </ol>
+            </div>
+            <div>
+              <h3 style="margin:6px 0">GitHub Copilot</h3>
+              <ol>
+                <li>V levém panelu otevři <strong>Extensions</strong> (Ctrl+Shift+X).</li>
+                <li>Nainstaluj <strong>GitHub Copilot</strong> a volitelně <strong>GitHub Copilot Chat</strong>.</li>
+                <li>Po instalaci potvrď přihlášení k GitHubu (pokud se zobrazí výzva).</li>
+              </ol>
+            </div>
+          </div>
+          <p>Jak Copilot používat v editoru:</p>
+          <ul>
+            <li><strong>Automatické návrhy</strong> při psaní – potvrď klávesou <kbd>Tab</kbd>, zruš <kbd>Esc</kbd>.</li>
+            <li><strong>Vyvolat návrh</strong>: <kbd>Alt</kbd> + <kbd>\</kbd> (Windows). Další návrh: <kbd>Alt</kbd> + <kbd>]</kbd>, předchozí: <kbd>Alt</kbd> + <kbd>[</kbd>.</li>
+            <li><strong>Copilot Chat</strong>: otevři panel Chat a napiš, co chceš (např. „udělej mi hezčí CSS tlačítko“).</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>4) Vytvoření repozitáře a první push (volitelné)</h2>
+          <p>Chceš mít svou stránku i na GitHubu? Tady je ultra‑základní postup. Příkazy jsou pro Windows PowerShell:</p>
+          <div class="code"><code># jednou nastav své jméno a e‑mail v Gitu (nahraď vlastními údaji)
+git config --global user.name "Tvé Jméno"
+git config --global user.email "tvuj@email.cz"
+
+# v kořeni projektu (složka HTML_course)
+git init
+git add .
+git commit -m "První commit z hodiny 3"
+git branch -M main
+
+# na github.com založ nový prázdný repo (bez README) a vlož jeho adresu místo URL
+git remote add origin https://github.com/UZIVATEL/fere-html.git
+git push -u origin main</code></div>
+          <div class="tip"><strong>Poznámka:</strong> Pokud „git“ nefunguje, nainstaluj <a class="btn-secondary" href="https://git-scm.com/" target="_blank" rel="noopener">Git for Windows</a> a VS Code restartuj.</div>
+        </section>
+
+        <section>
+          <h2>5) Mini úkol 🎯 – zkrášli stránku z minulé hodiny</h2>
+          <ol>
+            <li>Otevři soubor z <strong>Hodiny 2</strong> a v CSS udělej lepší tlačítko a hlavičku.</li>
+            <li>Zeptej se Copilota: <em>„Navrhni moderní CSS pro tlačítko s přechodem a zaoblenými rohy.“</em></li>
+            <li>Úpravy ulož a commitni: <em>„vylepšené styly, přidán gradient“</em>. Pokud chceš, pushni na GitHub.</li>
+          </ol>
+          <p>Tip na prompt do chatu: <em>„Jsem začátečník. Vysvětli mi, co dělá každý řádek v tomto CSS a navrhni zjednodušení.“</em></p>
+        </section>
+
+        <section>
+          <h2>Bezpečnost a fair‑use</h2>
+          <ul>
+            <li>Do repozitářů nikdy nedávej hesla ani tajné klíče.</li>
+            <li>Copilot je skvělý pomocník, ale kód vždy projdi očima a zkus mu rozumět.</li>
+            <li>Co si nejsi jistý/á, že je tvoje, raději nepublikuj jako vlastní.</li>
+          </ul>
+        </section>
+      </main>
+
+      <footer>
+        Hotovo! Máš účet na GitHubu, Copilot ve VS Code a víš, jak projekt nahrát na GitHub. Příště můžeme zkusit větve (branches) a pull requesty.
+      </footer>
+    </div>
+  </div>
+</body>
+</html>
