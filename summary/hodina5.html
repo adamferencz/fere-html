@@ -1,136 +1,174 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summary - Hodina 5: Vícestránkový web</title>
-  <link rel="stylesheet" href="shared-style.css">
-  <style>
-    section ul {
-      list-style: none;
-      margin: 10px 0;
-      padding-left: 0;
-    }
-    section li {
-      padding: 5px 0;
-      color: #555;
-    }
-    section li:before {
-      content: "✓ ";
-      color: #667eea;
-      font-weight: bold;
-      margin-right: 5px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <nav class="top-nav">
-      <a href="../index.html" class="nav-btn">🏠 Domů</a>
-      <a href="hodina1.html" class="nav-btn">📚 Summary 1</a>
-      <a href="hodina2.html" class="nav-btn">📚 Summary 2</a>
-      <a href="hodina3.html" class="nav-btn">📚 Summary 3</a>
-      <a href="hodina4.html" class="nav-btn">📚 Summary 4</a>
-      <a href="hodina5.html" class="nav-btn active">📚 Summary 5</a>
-      <a href="hodina6.html" class="nav-btn">📚 Summary 6</a>
-      <a href="hodina7.html" class="nav-btn">📚 Summary 7</a>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary - Hodina 5: Vícestránkový web</title>
+    <link rel="stylesheet" href="shared-style.css" />
+    <style>
+      section ul {
+        list-style: none;
+        margin: 10px 0;
+        padding-left: 0;
+      }
+      section li {
+        padding: 5px 0;
+        color: #555;
+      }
+      section li:before {
+        content: "✓ ";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="top-nav">
+        <a href="../index.html" class="nav-btn">🏠 Domů</a>
+        <a href="hodina1.html" class="nav-btn">📚 Summary 1</a>
+        <a href="hodina2.html" class="nav-btn">📚 Summary 2</a>
+        <a href="hodina3.html" class="nav-btn">📚 Summary 3</a>
+        <a href="hodina4.html" class="nav-btn">📚 Summary 4</a>
+        <a href="hodina5.html" class="nav-btn active">📚 Summary 5</a>
+        <a href="hodina6.html" class="nav-btn">📚 Summary 6</a>
+        <a href="hodina7.html" class="nav-btn">📚 Summary 7</a>
+      </nav>
 
-    <header>
-      <h1>🌐 Hodina 5: Vícestránkový web s menu</h1>
-      <p class="subtitle">Propojení více HTML stránek a sdílené CSS</p>
-    </header>
+      <header>
+        <h1>🌐 Hodina 5: Vícestránkový web s menu</h1>
+        <p class="subtitle">Propojení více HTML stránek a sdílené CSS</p>
+      </header>
 
-    <div class="download-section">
-      <h3>📥 Stáhnout hodinu</h3>
-      <p>Chceš si uložit materiály z páté hodiny?</p>
-      <a href="../hodina5 - služba/index.html" download="hodina5-web.html" class="btn btn-download">⬇️ Stáhnout hodinu 5</a>
-    </div>
+      <div class="download-section">
+        <h3>📥 Stáhnout hodinu</h3>
+        <p>Chceš si uložit materiály z páté hodiny?</p>
+        <a
+          href="../hodina5 - služba/index.html"
+          download="hodina5-web.html"
+          class="btn btn-download"
+          >⬇️ Stáhnout hodinu 5</a
+        >
+      </div>
 
-    <main>
-      <section>
-        <h2>1️⃣ Struktura vícestránkového webu</h2>
-        <p>Profesionální web se obvykle skládá z více stránek. V této hodině jsme vytvořili:</p>
-        <ul>
-          <li><code>index.html</code> – úvodní/domovská stránka</li>
-          <li><code>cenik.html</code> – stránka s ceníkem služeb</li>
-          <li><code>onas.html</code> – informace o firmě/projektu</li>
-          <li><code>style.css</code> – společný stylesheet pro všechny stránky</li>
-        </ul>
-      </section>
+      <main>
+        <section>
+          <h2>1️⃣ Struktura vícestránkového webu</h2>
+          <p>
+            Profesionální web se obvykle skládá z více stránek. V této hodině
+            jsme vytvořili:
+          </p>
+          <ul>
+            <li><code>index.html</code> – úvodní/domovská stránka</li>
+            <li><code>cenik.html</code> – stránka s ceníkem služeb</li>
+            <li><code>onas.html</code> – informace o firmě/projektu</li>
+            <li>
+              <code>style.css</code> – společný stylesheet pro všechny stránky
+            </li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>2️⃣ Navigační menu</h2>
-        <p>Menu je <strong>stejné na všech stránkách</strong> a umožňuje snadný přechod.</p>
-        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>&lt;nav&gt;
+        <section>
+          <h2>2️⃣ Navigační menu</h2>
+          <p>
+            Menu je <strong>stejné na všech stránkách</strong> a umožňuje snadný
+            přechod.
+          </p>
+          <pre
+            style="
+              background: #f4f4f4;
+              padding: 15px;
+              border-radius: 5px;
+              overflow-x: auto;
+            "
+          ><code>&lt;nav&gt;
   &lt;a href="index.html"&gt;Domů&lt;/a&gt;
   &lt;a href="cenik.html"&gt;Ceník&lt;/a&gt;
   &lt;a href="onas.html"&gt;O nás&lt;/a&gt;
 &lt;/nav&gt;</code></pre>
-        <p><strong>Důležité:</strong> Na každé stránce musí být menu se <strong>stejnými odkazy</strong>.</p>
-      </section>
+          <p>
+            <strong>Důležité:</strong> Na každé stránce musí být menu se
+            <strong>stejnými odkazy</strong>.
+          </p>
+        </section>
 
-      <section>
-        <h2>3️⃣ Relativní cesty k souborům</h2>
-        <p>Když všechny HTML soubory jsou ve stejné složce:</p>
-        <ul>
-          <li><code>href="index.html"</code> – odkaz na soubor ve stejné složce</li>
-          <li><code>href="style.css"</code> – CSS soubor ve stejné složce</li>
-        </ul>
-        <p>Pokud máš složky:</p>
-        <ul>
-          <li><code>href="../index.html"</code> – odkaz o složku výš</li>
-          <li><code>href="obrazky/logo.png"</code> – obrázek v podsložce</li>
-        </ul>
-      </section>
+        <section>
+          <h2>3️⃣ Relativní cesty k souborům</h2>
+          <p>Když všechny HTML soubory jsou ve stejné složce:</p>
+          <ul>
+            <li>
+              <code>href="index.html"</code> – odkaz na soubor ve stejné složce
+            </li>
+            <li><code>href="style.css"</code> – CSS soubor ve stejné složce</li>
+          </ul>
+          <p>Pokud máš složky:</p>
+          <ul>
+            <li><code>href="../index.html"</code> – odkaz o složku výš</li>
+            <li><code>href="obrazky/logo.png"</code> – obrázek v podsložce</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>4️⃣ Sdílený CSS soubor</h2>
-        <p><strong>Výhody jednoho CSS pro všechny stránky:</strong></p>
-        <ul>
-          <li>Konzistentní vzhled celého webu</li>
-          <li>Změna na jednom místě = změna na všech stránkách</li>
-          <li>Prohlížeč CSS cachuje → rychlejší načítání</li>
-        </ul>
-        <p>Na každé stránce v <code>&lt;head&gt;</code>:</p>
-        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
-      </section>
+        <section>
+          <h2>4️⃣ Sdílený CSS soubor</h2>
+          <p><strong>Výhody jednoho CSS pro všechny stránky:</strong></p>
+          <ul>
+            <li>Konzistentní vzhled celého webu</li>
+            <li>Změna na jednom místě = změna na všech stránkách</li>
+            <li>Prohlížeč CSS cachuje → rychlejší načítání</li>
+          </ul>
+          <p>Na každé stránce v <code>&lt;head&gt;</code>:</p>
+          <pre
+            style="
+              background: #f4f4f4;
+              padding: 15px;
+              border-radius: 5px;
+              overflow-x: auto;
+            "
+          ><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+        </section>
 
-      <section>
-        <h2>5️⃣ Praktické použití</h2>
-        <p><strong>Co jsme vytvořili:</strong></p>
-        <ul>
-          <li>Úvodní stránku s popisem webu</li>
-          <li>Ceník s tabulkou nebo seznamem služeb</li>
-          <li>Stránku "O nás" s informacemi</li>
-          <li>Jednotné menu na všech stránkách</li>
-        </ul>
-      </section>
+        <section>
+          <h2>5️⃣ Praktické použití</h2>
+          <p><strong>Co jsme vytvořili:</strong></p>
+          <ul>
+            <li>Úvodní stránku s popisem webu</li>
+            <li>Ceník s tabulkou nebo seznamem služeb</li>
+            <li>Stránku "O nás" s informacemi</li>
+            <li>Jednotné menu na všech stránkách</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>6️⃣ Tipy pro vícestránkové weby</h2>
-        <ul>
-          <li>Drž konzistentní strukturu <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code></li>
-          <li>Menu by mělo být vždy na stejném místě</li>
-          <li>Používej popisné názvy souborů (ne <code>stranka1.html</code>, ale <code>kontakt.html</code>)</li>
-          <li>Testuj všechny odkazy – nesmí vést nikam</li>
-        </ul>
-      </section>
+        <section>
+          <h2>6️⃣ Tipy pro vícestránkové weby</h2>
+          <ul>
+            <li>
+              Drž konzistentní strukturu <code>&lt;header&gt;</code>,
+              <code>&lt;main&gt;</code>, <code>&lt;footer&gt;</code>
+            </li>
+            <li>Menu by mělo být vždy na stejném místě</li>
+            <li>
+              Používej popisné názvy souborů (ne <code>stranka1.html</code>, ale
+              <code>kontakt.html</code>)
+            </li>
+            <li>Testuj všechny odkazy – nesmí vést nikam</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>✅ Shrnutí hodiny 5</h2>
-        <ul>
-          <li>Vytvořili jsme vícestránkový web (index, ceník, o nás)</li>
-          <li>Naučili jsme se propojovat stránky pomocí odkazů</li>
-          <li>Použili jsme sdílený CSS soubor pro konzistentní design</li>
-          <li>Pochopili jsme relativní cesty k souborům</li>
-        </ul>
-      </section>
-    </main>
+        <section>
+          <h2>✅ Shrnutí hodiny 5</h2>
+          <ul>
+            <li>Vytvořili jsme vícestránkový web (index, ceník, o nás)</li>
+            <li>Naučili jsme se propojovat stránky pomocí odkazů</li>
+            <li>Použili jsme sdílený CSS soubor pro konzistentní design</li>
+            <li>Pochopili jsme relativní cesty k souborům</li>
+          </ul>
+        </section>
+      </main>
 
-    <footer>
-      <p>© 2025 | HTML Kurz - Gymnázium Havlíčkův Brod</p>
-    </footer>
-  </div>
-</body>
+      <footer>
+        <p>© 2025 | HTML Kurz - Gymnázium Havlíčkův Brod</p>
+      </footer>
+    </div>
+  </body>
 </html>

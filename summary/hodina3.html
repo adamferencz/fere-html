@@ -1,114 +1,166 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summary - Hodina 3: GitHub a Copilot</title>
-  <link rel="stylesheet" href="shared-style.css">
-  <style>
-    section ul {
-      list-style: none;
-      margin: 10px 0;
-      padding-left: 0;
-    }
-    section li {
-      padding: 5px 0;
-      color: #555;
-    }
-    section li:before {
-      content: "✓ ";
-      color: #667eea;
-      font-weight: bold;
-      margin-right: 5px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <nav class="top-nav">
-      <a href="../index.html" class="nav-btn">🏠 Domů</a>
-      <a href="hodina1.html" class="nav-btn">📚 Summary 1</a>
-      <a href="hodina2.html" class="nav-btn">📚 Summary 2</a>
-      <a href="hodina3.html" class="nav-btn active">📚 Summary 3</a>
-      <a href="hodina4.html" class="nav-btn">📚 Summary 4</a>
-      <a href="hodina5.html" class="nav-btn">📚 Summary 5</a>
-      <a href="hodina6.html" class="nav-btn">📚 Summary 6</a>
-      <a href="hodina7.html" class="nav-btn">📚 Summary 7</a>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary - Hodina 3: GitHub a Copilot</title>
+    <link rel="stylesheet" href="shared-style.css" />
+    <style>
+      section ul {
+        list-style: none;
+        margin: 10px 0;
+        padding-left: 0;
+      }
+      section li {
+        padding: 5px 0;
+        color: #555;
+      }
+      section li:before {
+        content: "✓ ";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="top-nav">
+        <a href="../index.html" class="nav-btn">🏠 Domů</a>
+        <a href="hodina1.html" class="nav-btn">📚 Summary 1</a>
+        <a href="hodina2.html" class="nav-btn">📚 Summary 2</a>
+        <a href="hodina3.html" class="nav-btn active">📚 Summary 3</a>
+        <a href="hodina4.html" class="nav-btn">📚 Summary 4</a>
+        <a href="hodina5.html" class="nav-btn">📚 Summary 5</a>
+        <a href="hodina6.html" class="nav-btn">📚 Summary 6</a>
+        <a href="hodina7.html" class="nav-btn">📚 Summary 7</a>
+      </nav>
 
-    <header>
-      <h1>🐙 Hodina 3: GitHub a GitHub Copilot</h1>
-      <p class="subtitle">Verzování, spolupráce a AI asistent pro programátory</p>
-    </header>
+      <header>
+        <h1>🐙 Hodina 3: GitHub a GitHub Copilot</h1>
+        <p class="subtitle">
+          Verzování, spolupráce a AI asistent pro programátory
+        </p>
+      </header>
 
-    <div class="download-section">
-      <h3>📥 Stáhnout hodinu</h3>
-      <p>Chceš si uložit materiály z třetí hodiny?</p>
-      <a href="../hodina3/hodina3.html" download="hodina3.html" class="btn btn-download">⬇️ Stáhnout hodinu 3</a>
-    </div>
+      <div class="download-section">
+        <h3>📥 Stáhnout hodinu</h3>
+        <p>Chceš si uložit materiály z třetí hodiny?</p>
+        <a
+          href="../hodina3/hodina3.html"
+          download="hodina3.html"
+          class="btn btn-download"
+          >⬇️ Stáhnout hodinu 3</a
+        >
+      </div>
 
-    <main>
-      <section>
-        <h2>1️⃣ Co je Git a GitHub?</h2>
-        <ul>
-          <li><strong>Git</strong> = nástroj na verzování kódu (historie změn, návrat v čase)</li>
-          <li><strong>GitHub</strong> = webová platforma pro ukládání a sdílení Git repozitářů</li>
-          <li><strong>Repozitář (repo)</strong> = složka s projektem včetně historie všech změn</li>
-          <li><strong>Push</strong> = nahrání změn z počítače na GitHub</li>
-          <li><strong>Pull</strong> = stažení změn z GitHubu do počítače</li>
-        </ul>
-        <p><strong>Proč to použít?</strong> Záloha kódu, spolupráce s ostatními, přehled o změnách, možnost vrátit se k předchozí verzi.</p>
-      </section>
+      <main>
+        <section>
+          <h2>1️⃣ Co je Git a GitHub?</h2>
+          <ul>
+            <li>
+              <strong>Git</strong> = nástroj na verzování kódu (historie změn,
+              návrat v čase)
+            </li>
+            <li>
+              <strong>GitHub</strong> = webová platforma pro ukládání a sdílení
+              Git repozitářů
+            </li>
+            <li>
+              <strong>Repozitář (repo)</strong> = složka s projektem včetně
+              historie všech změn
+            </li>
+            <li><strong>Push</strong> = nahrání změn z počítače na GitHub</li>
+            <li><strong>Pull</strong> = stažení změn z GitHubu do počítače</li>
+          </ul>
+          <p>
+            <strong>Proč to použít?</strong> Záloha kódu, spolupráce s
+            ostatními, přehled o změnách, možnost vrátit se k předchozí verzi.
+          </p>
+        </section>
 
-      <section>
-        <h2>2️⃣ Založení účtu na GitHubu</h2>
-        <p><strong>Postup:</strong></p>
-        <ol>
-          <li>Otevři <a href="https://github.com/" target="_blank" style="color: #667eea;">github.com</a></li>
-          <li>Klikni na <em>Sign up</em></li>
-          <li>Vyplň e-mail, heslo a uživatelské jméno</li>
-          <li>Potvrď e-mail a přihlas se</li>
-        </ol>
-      </section>
+        <section>
+          <h2>2️⃣ Založení účtu na GitHubu</h2>
+          <p><strong>Postup:</strong></p>
+          <ol>
+            <li>
+              Otevři
+              <a
+                href="https://github.com/"
+                target="_blank"
+                style="color: #667eea"
+                >github.com</a
+              >
+            </li>
+            <li>Klikni na <em>Sign up</em></li>
+            <li>Vyplň e-mail, heslo a uživatelské jméno</li>
+            <li>Potvrď e-mail a přihlas se</li>
+          </ol>
+        </section>
 
-      <section>
-        <h2>3️⃣ Přihlášení do GitHubu ve VS Code</h2>
-        <p><strong>Krok za krokem:</strong></p>
-        <ol>
-          <li>Spusť Visual Studio Code</li>
-          <li>V levém spodním rohu klikni na ikonu <strong>Accounts</strong> (panáček)</li>
-          <li>Vyber <em>Sign in with GitHub</em></li>
-          <li>Potvrď přihlášení v prohlížeči</li>
-          <li>Vrať se do VS Code – jsi přihlášen/a!</li>
-        </ol>
-      </section>
+        <section>
+          <h2>3️⃣ Přihlášení do GitHubu ve VS Code</h2>
+          <p><strong>Krok za krokem:</strong></p>
+          <ol>
+            <li>Spusť Visual Studio Code</li>
+            <li>
+              V levém spodním rohu klikni na ikonu
+              <strong>Accounts</strong> (panáček)
+            </li>
+            <li>Vyber <em>Sign in with GitHub</em></li>
+            <li>Potvrď přihlášení v prohlížeči</li>
+            <li>Vrať se do VS Code – jsi přihlášen/a!</li>
+          </ol>
+        </section>
 
-      <section>
-        <h2>4️⃣ GitHub Copilot - AI asistent</h2>
-        <p><strong>Co je Copilot?</strong> AI nástroj, který ti pomáhá psát kód – navrhuje dokončení, vysvětluje kód a generuje řešení.</p>
-        
-        <p><strong>Instalace:</strong></p>
-        <ol>
-          <li>Otevři <strong>Extensions</strong> (Ctrl+Shift+X)</li>
-          <li>Nainstaluj <strong>GitHub Copilot</strong></li>
-          <li>Volitelně nainstaluj i <strong>GitHub Copilot Chat</strong></li>
-          <li>Po instalaci potvrď přihlášení k GitHubu</li>
-        </ol>
+        <section>
+          <h2>4️⃣ GitHub Copilot - AI asistent</h2>
+          <p>
+            <strong>Co je Copilot?</strong> AI nástroj, který ti pomáhá psát kód
+            – navrhuje dokončení, vysvětluje kód a generuje řešení.
+          </p>
 
-        <p><strong>Jak Copilot používat:</strong></p>
-        <ul>
-          <li><strong>Automatické návrhy</strong> – při psaní se zobrazují šedě, potvrď <kbd>Tab</kbd>, zruš <kbd>Esc</kbd></li>
-          <li><strong>Vyvolat návrh</strong> – <kbd>Alt</kbd> + <kbd>\</kbd></li>
-          <li><strong>Další návrh</strong> – <kbd>Alt</kbd> + <kbd>]</kbd></li>
-          <li><strong>Předchozí návrh</strong> – <kbd>Alt</kbd> + <kbd>[</kbd></li>
-          <li><strong>Copilot Chat</strong> – otevři panel a piš dotazy (např. "udělej hezčí CSS tlačítko")</li>
-        </ul>
-      </section>
+          <p><strong>Instalace:</strong></p>
+          <ol>
+            <li>Otevři <strong>Extensions</strong> (Ctrl+Shift+X)</li>
+            <li>Nainstaluj <strong>GitHub Copilot</strong></li>
+            <li>Volitelně nainstaluj i <strong>GitHub Copilot Chat</strong></li>
+            <li>Po instalaci potvrď přihlášení k GitHubu</li>
+          </ol>
 
-      <section>
-        <h2>5️⃣ Základní Git příkazy (PowerShell)</h2>
-        <p>Příkazy pro práci s Gitem v terminálu:</p>
-        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code># Nastavení uživatele (jednou)
+          <p><strong>Jak Copilot používat:</strong></p>
+          <ul>
+            <li>
+              <strong>Automatické návrhy</strong> – při psaní se zobrazují šedě,
+              potvrď <kbd>Tab</kbd>, zruš <kbd>Esc</kbd>
+            </li>
+            <li>
+              <strong>Vyvolat návrh</strong> – <kbd>Alt</kbd> + <kbd>\</kbd>
+            </li>
+            <li>
+              <strong>Další návrh</strong> – <kbd>Alt</kbd> + <kbd>]</kbd>
+            </li>
+            <li>
+              <strong>Předchozí návrh</strong> – <kbd>Alt</kbd> + <kbd>[</kbd>
+            </li>
+            <li>
+              <strong>Copilot Chat</strong> – otevři panel a piš dotazy (např.
+              "udělej hezčí CSS tlačítko")
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>5️⃣ Základní Git příkazy (PowerShell)</h2>
+          <p>Příkazy pro práci s Gitem v terminálu:</p>
+          <pre
+            style="
+              background: #f4f4f4;
+              padding: 15px;
+              border-radius: 5px;
+              overflow-x: auto;
+            "
+          ><code># Nastavení uživatele (jednou)
 git config --global user.name "Tvé Jméno"
 git config --global user.email "tvuj@email.cz"
 
@@ -129,33 +181,40 @@ git remote add origin https://github.com/UZIVATEL/REPO.git
 
 # Nahrání na GitHub
 git push -u origin main</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h2>6️⃣ Bezpečnost a dobrá praxe</h2>
-        <ul>
-          <li>Nikdy nenahrávej hesla, API klíče nebo tajné tokeny do repozitáře</li>
-          <li>Copilot je pomocník, ne náhrada za učení – vždy se snaž kódu rozumět</li>
-          <li>Co si nejsi jistý/á autorskými právy, nepublikuj jako vlastní</li>
-          <li>Commituj často s popisnými zprávami</li>
-        </ul>
-      </section>
+        <section>
+          <h2>6️⃣ Bezpečnost a dobrá praxe</h2>
+          <ul>
+            <li>
+              Nikdy nenahrávej hesla, API klíče nebo tajné tokeny do repozitáře
+            </li>
+            <li>
+              Copilot je pomocník, ne náhrada za učení – vždy se snaž kódu
+              rozumět
+            </li>
+            <li>
+              Co si nejsi jistý/á autorskými právy, nepublikuj jako vlastní
+            </li>
+            <li>Commituj často s popisnými zprávami</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>✅ Shrnutí hodiny 3</h2>
-        <ul>
-          <li>Založili jsme si účet na GitHubu</li>
-          <li>Přihlásili jsme se do GitHubu ve VS Code</li>
-          <li>Nainstalovali jsme GitHub Copilot</li>
-          <li>Naučili jsme se základní Git příkazy</li>
-          <li>Vyzkoušeli jsme AI asistenta pro psaní kódu</li>
-        </ul>
-      </section>
-    </main>
+        <section>
+          <h2>✅ Shrnutí hodiny 3</h2>
+          <ul>
+            <li>Založili jsme si účet na GitHubu</li>
+            <li>Přihlásili jsme se do GitHubu ve VS Code</li>
+            <li>Nainstalovali jsme GitHub Copilot</li>
+            <li>Naučili jsme se základní Git příkazy</li>
+            <li>Vyzkoušeli jsme AI asistenta pro psaní kódu</li>
+          </ul>
+        </section>
+      </main>
 
-    <footer>
-      <p>© 2025 | HTML Kurz - Gymnázium Havlíčkův Brod</p>
-    </footer>
-  </div>
-</body>
+      <footer>
+        <p>© 2025 | HTML Kurz - Gymnázium Havlíčkův Brod</p>
+      </footer>
+    </div>
+  </body>
 </html>

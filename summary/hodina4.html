@@ -1,70 +1,96 @@
 <!DOCTYPE html>
 <html lang="cs">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Summary - Hodina 4: Layout a struktura stránky</title>
-  <link rel="stylesheet" href="shared-style.css">
-  <style>
-    section ul {
-      list-style: none;
-      margin: 10px 0;
-      padding-left: 0;
-    }
-    section li {
-      padding: 5px 0;
-      color: #555;
-    }
-    section li:before {
-      content: "✓ ";
-      color: #667eea;
-      font-weight: bold;
-      margin-right: 5px;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <nav class="top-nav">
-      <a href="../index.html" class="nav-btn">🏠 Domů</a>
-      <a href="hodina1.html" class="nav-btn">📚 Summary 1</a>
-      <a href="hodina2.html" class="nav-btn">📚 Summary 2</a>
-      <a href="hodina3.html" class="nav-btn">📚 Summary 3</a>
-      <a href="hodina4.html" class="nav-btn active">📚 Summary 4</a>
-      <a href="hodina5.html" class="nav-btn">📚 Summary 5</a>
-      <a href="hodina6.html" class="nav-btn">📚 Summary 6</a>
-      <a href="hodina7.html" class="nav-btn">📚 Summary 7</a>
-    </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Summary - Hodina 4: Layout a struktura stránky</title>
+    <link rel="stylesheet" href="shared-style.css" />
+    <style>
+      section ul {
+        list-style: none;
+        margin: 10px 0;
+        padding-left: 0;
+      }
+      section li {
+        padding: 5px 0;
+        color: #555;
+      }
+      section li:before {
+        content: "✓ ";
+        color: #667eea;
+        font-weight: bold;
+        margin-right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="top-nav">
+        <a href="../index.html" class="nav-btn">🏠 Domů</a>
+        <a href="hodina1.html" class="nav-btn">📚 Summary 1</a>
+        <a href="hodina2.html" class="nav-btn">📚 Summary 2</a>
+        <a href="hodina3.html" class="nav-btn">📚 Summary 3</a>
+        <a href="hodina4.html" class="nav-btn active">📚 Summary 4</a>
+        <a href="hodina5.html" class="nav-btn">📚 Summary 5</a>
+        <a href="hodina6.html" class="nav-btn">📚 Summary 6</a>
+        <a href="hodina7.html" class="nav-btn">📚 Summary 7</a>
+      </nav>
 
-    <header>
-      <h1>🏗️ Hodina 4: Layout a struktura stránky</h1>
-      <p class="subtitle">Sémantické HTML5 značky pro profesionální rozložení</p>
-    </header>
+      <header>
+        <h1>🏗️ Hodina 4: Layout a struktura stránky</h1>
+        <p class="subtitle">
+          Sémantické HTML5 značky pro profesionální rozložení
+        </p>
+      </header>
 
-    <div class="download-section">
-      <h3>📥 Stáhnout hodinu</h3>
-      <p>Chceš si uložit materiály ze čtvrté hodiny?</p>
-      <a href="../hodina4 - layout/basictemplate.html" download="hodina4-layout.html" class="btn btn-download">⬇️ Stáhnout hodinu 4</a>
-    </div>
+      <div class="download-section">
+        <h3>📥 Stáhnout hodinu</h3>
+        <p>Chceš si uložit materiály ze čtvrté hodiny?</p>
+        <a
+          href="../hodina4 - layout/basictemplate.html"
+          download="hodina4-layout.html"
+          class="btn btn-download"
+          >⬇️ Stáhnout hodinu 4</a
+        >
+      </div>
 
-    <main>
-      <section>
-        <h2>1️⃣ Sémantické HTML5 elementy</h2>
-        <p>Moderní HTML5 zavádí speciální značky, které dávají struktuře stránky <strong>význam</strong> (sémantiku).</p>
-        <ul>
-          <li><code>&lt;header&gt;</code> – hlavička stránky (logo, název, menu)</li>
-          <li><code>&lt;main&gt;</code> – hlavní obsah (jen jeden na stránce!)</li>
-          <li><code>&lt;section&gt;</code> – logická sekce/oddíl obsahu</li>
-          <li><code>&lt;aside&gt;</code> – boční panel, doplňkový obsah</li>
-          <li><code>&lt;footer&gt;</code> – patička (copyright, kontakt, odkazy)</li>
-          <li><code>&lt;nav&gt;</code> – navigační menu</li>
-        </ul>
-        <p><strong>Proč sémantika?</strong> Lepší SEO, přístupnost pro handicapované uživatele, čitelnější kód.</p>
-      </section>
+      <main>
+        <section>
+          <h2>1️⃣ Sémantické HTML5 elementy</h2>
+          <p>
+            Moderní HTML5 zavádí speciální značky, které dávají struktuře
+            stránky <strong>význam</strong> (sémantiku).
+          </p>
+          <ul>
+            <li>
+              <code>&lt;header&gt;</code> – hlavička stránky (logo, název, menu)
+            </li>
+            <li>
+              <code>&lt;main&gt;</code> – hlavní obsah (jen jeden na stránce!)
+            </li>
+            <li><code>&lt;section&gt;</code> – logická sekce/oddíl obsahu</li>
+            <li><code>&lt;aside&gt;</code> – boční panel, doplňkový obsah</li>
+            <li>
+              <code>&lt;footer&gt;</code> – patička (copyright, kontakt, odkazy)
+            </li>
+            <li><code>&lt;nav&gt;</code> – navigační menu</li>
+          </ul>
+          <p>
+            <strong>Proč sémantika?</strong> Lepší SEO, přístupnost pro
+            handicapované uživatele, čitelnější kód.
+          </p>
+        </section>
 
-      <section>
-        <h2>2️⃣ Základní struktura stránky</h2>
-        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>&lt;!DOCTYPE html&gt;
+        <section>
+          <h2>2️⃣ Základní struktura stránky</h2>
+          <pre
+            style="
+              background: #f4f4f4;
+              padding: 15px;
+              border-radius: 5px;
+              overflow-x: auto;
+            "
+          ><code>&lt;!DOCTYPE html&gt;
 &lt;html lang="cs"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -93,70 +119,90 @@
 
 &lt;/body&gt;
 &lt;/html&gt;</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h2>3️⃣ Header - Hlavička</h2>
-        <p><strong>Co obsahuje:</strong></p>
-        <ul>
-          <li>Logo nebo název webu</li>
-          <li>Hlavní navigační menu (<code>&lt;nav&gt;</code>)</li>
-          <li>Případně vyhledávací pole</li>
-        </ul>
-        <p>Hlavička je obvykle <strong>fixní nebo sticky</strong> – drží se nahoře i při scrollování.</p>
-      </section>
+        <section>
+          <h2>3️⃣ Header - Hlavička</h2>
+          <p><strong>Co obsahuje:</strong></p>
+          <ul>
+            <li>Logo nebo název webu</li>
+            <li>Hlavní navigační menu (<code>&lt;nav&gt;</code>)</li>
+            <li>Případně vyhledávací pole</li>
+          </ul>
+          <p>
+            Hlavička je obvykle <strong>fixní nebo sticky</strong> – drží se
+            nahoře i při scrollování.
+          </p>
+        </section>
 
-      <section>
-        <h2>4️⃣ Main - Hlavní obsah</h2>
-        <p><strong>Důležité pravidlo:</strong> Na stránce může být jen JEDEN <code>&lt;main&gt;</code> element!</p>
-        <ul>
-          <li>Obsahuje hlavní obsah stránky</li>
-          <li>Vnořené sekce (<code>&lt;section&gt;</code>) tvoří logické celky</li>
-          <li>Neobsahuje opakující se prvky (menu, patičku)</li>
-        </ul>
-      </section>
+        <section>
+          <h2>4️⃣ Main - Hlavní obsah</h2>
+          <p>
+            <strong>Důležité pravidlo:</strong> Na stránce může být jen JEDEN
+            <code>&lt;main&gt;</code> element!
+          </p>
+          <ul>
+            <li>Obsahuje hlavní obsah stránky</li>
+            <li>
+              Vnořené sekce (<code>&lt;section&gt;</code>) tvoří logické celky
+            </li>
+            <li>Neobsahuje opakující se prvky (menu, patičku)</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>5️⃣ Section - Sekce/Oddíly</h2>
-        <p>Rozděluje obsah do logických celků, každý s vlastním nadpisem.</p>
-        <p><strong>Příklad použití:</strong></p>
-        <ul>
-          <li>Sekce "O nás"</li>
-          <li>Sekce "Naše služby"</li>
-          <li>Sekce "Kontakt"</li>
-          <li>Sekce "Reference"</li>
-        </ul>
-      </section>
+        <section>
+          <h2>5️⃣ Section - Sekce/Oddíly</h2>
+          <p>Rozděluje obsah do logických celků, každý s vlastním nadpisem.</p>
+          <p><strong>Příklad použití:</strong></p>
+          <ul>
+            <li>Sekce "O nás"</li>
+            <li>Sekce "Naše služby"</li>
+            <li>Sekce "Kontakt"</li>
+            <li>Sekce "Reference"</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>6️⃣ Aside - Boční panel</h2>
-        <p><strong>Co do něj patří:</strong></p>
-        <ul>
-          <li>Související články</li>
-          <li>Reklamy</li>
-          <li>Rychlé odkazy</li>
-          <li>Widget sociálních sítí</li>
-        </ul>
-        <p>Často se používá <strong>CSS Grid nebo Flexbox</strong> pro rozložení obsahu vedle sebe.</p>
-      </section>
+        <section>
+          <h2>6️⃣ Aside - Boční panel</h2>
+          <p><strong>Co do něj patří:</strong></p>
+          <ul>
+            <li>Související články</li>
+            <li>Reklamy</li>
+            <li>Rychlé odkazy</li>
+            <li>Widget sociálních sítí</li>
+          </ul>
+          <p>
+            Často se používá <strong>CSS Grid nebo Flexbox</strong> pro
+            rozložení obsahu vedle sebe.
+          </p>
+        </section>
 
-      <section>
-        <h2>7️⃣ Footer - Patička</h2>
-        <p><strong>Typický obsah:</strong></p>
-        <ul>
-          <li>Copyright a rok</li>
-          <li>Kontaktní údaje</li>
-          <li>Odkazy na sociální sítě</li>
-          <li>Podmínky užívání, GDPR</li>
-          <li>Sitemap (mapa stránek)</li>
-        </ul>
-      </section>
+        <section>
+          <h2>7️⃣ Footer - Patička</h2>
+          <p><strong>Typický obsah:</strong></p>
+          <ul>
+            <li>Copyright a rok</li>
+            <li>Kontaktní údaje</li>
+            <li>Odkazy na sociální sítě</li>
+            <li>Podmínky užívání, GDPR</li>
+            <li>Sitemap (mapa stránek)</li>
+          </ul>
+        </section>
 
-      <section>
-        <h2>8️⃣ Responzivní design</h2>
-        <p>Layout se musí <strong>přizpůsobit velikosti obrazovky</strong>.</p>
-        <p><strong>CSS Media Queries:</strong></p>
-        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>@media (max-width: 768px) {
+        <section>
+          <h2>8️⃣ Responzivní design</h2>
+          <p>
+            Layout se musí <strong>přizpůsobit velikosti obrazovky</strong>.
+          </p>
+          <p><strong>CSS Media Queries:</strong></p>
+          <pre
+            style="
+              background: #f4f4f4;
+              padding: 15px;
+              border-radius: 5px;
+              overflow-x: auto;
+            "
+          ><code>@media (max-width: 768px) {
   nav {
     flex-direction: column;
   }
@@ -165,22 +211,26 @@
     display: none; /* skryj boční panel na mobilu */
   }
 }</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h2>✅ Shrnutí hodiny 4</h2>
-        <ul>
-          <li>Naučili jsme se sémantické HTML5 značky</li>
-          <li>Vytvořili jsme základní strukturu stránky</li>
-          <li>Pochopili jsme účel <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code></li>
-          <li>Uvedli jsme základy responzivního designu</li>
-        </ul>
-      </section>
-    </main>
+        <section>
+          <h2>✅ Shrnutí hodiny 4</h2>
+          <ul>
+            <li>Naučili jsme se sémantické HTML5 značky</li>
+            <li>Vytvořili jsme základní strukturu stránky</li>
+            <li>
+              Pochopili jsme účel <code>&lt;header&gt;</code>,
+              <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>,
+              <code>&lt;aside&gt;</code>, <code>&lt;footer&gt;</code>
+            </li>
+            <li>Uvedli jsme základy responzivního designu</li>
+          </ul>
+        </section>
+      </main>
 
-    <footer>
-      <p>© 2025 | HTML Kurz - Gymnázium Havlíčkův Brod</p>
-    </footer>
-  </div>
-</body>
+      <footer>
+        <p>© 2025 | HTML Kurz - Gymnázium Havlíčkův Brod</p>
+      </footer>
+    </div>
+  </body>
 </html>
