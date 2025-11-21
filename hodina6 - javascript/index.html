@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hodina 6 - Měnění obrázků pomocí tlačítek</title>
+</head>
+<body>
+
+  <div class="container">
+    <h1>🖼️ Galerie obrázků</h1>
+    
+    <div class="buttons">
+      <button id="btnPrev">◀ Předchozí</button>
+      <button id="btnNext">Další ▶</button>
+    </div>
+
+    <div class="image-box">
+    <img id="obrazek" src="https://eboxcz-ott-images.ssl.cdn.cra.cz/r2640x1484n/80353150-250c-5a14-b093-a50da00e6fdd.avif?default=a35c5f6f-c9f8-44a8-a4ed-4fae819826e4" alt="Obrázek" style="max-width: 400px; height: auto;">
+    </div>
+
+    <div class="info">
+      Klikni na tlačítka pro změnu obrázku
+    </div>
+  </div>
+
+  <script>
+    const leftButton = document.getElementById('btnPrev');
+    const rightButton = document.getElementById('btnNext');
+    const obrazekElement = document.getElementById('obrazek');
+
+    const obrazky = [
+      'https://static0.colliderimages.com/wordpress/wp-content/uploads/2024/08/mr-burns-from-the-simpsons.jpg?q=70&fit=crop&w=1232&h=693&dpr=1',
+      'https://eboxcz-ott-images.ssl.cdn.cra.cz/r2640x1484n/80353150-250c-5a14-b093-a50da00e6fdd.avif?default=a35c5f6f-c9f8-44a8-a4ed-4fae819826e4',
+      'https://static0.colliderimages.com/wordpress/wp-content/uploads/2024/08/the-simpsons-burns-verkaufen-der-kratwerk-mr-burns.jpg?q=49&fit=crop&w=825&dpr=2'
+    ];
+
+    let currentIndex = 0;
+
+    leftButton.addEventListener('click', function() {
+      currentIndex = currentIndex - 1;
+
+        if (currentIndex < 0) {
+            currentIndex = obrazky.length - 1;
+        }
+
+      obrazekElement.src = obrazky[currentIndex];
+    });
+
+    rightButton.addEventListener('click', function() {
+      currentIndex = currentIndex + 1;
+      
+      if (currentIndex >= obrazky.length) {
+        currentIndex = 0;
+      }
+      
+      obrazekElement.src = obrazky[currentIndex];
+    });
+
+  </script>
+
+</body>
+</html>

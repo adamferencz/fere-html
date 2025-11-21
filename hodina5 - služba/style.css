@@ -1,0 +1,57 @@
+/* ====== Základní styly pro všechny stránky ====== */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  margin: 40px;
+}
+
+h1 {
+  color: #007BFF;
+}
+
+nav {
+  background-color: #007BFF;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  margin: 20px 0;
+}
+
+ul {
+  list-style-type: square;
+}
+
+table {
+  border-collapse: collapse;
+  width: 60%;
+  background: white;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+th {
+  background-color: #e9ecef;
+}
+
+p {
+  max-width: 600px;
+}

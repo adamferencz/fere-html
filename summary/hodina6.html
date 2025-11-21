@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Summary - Hodina 6: JavaScript - Interaktivita</title>
+  <link rel="stylesheet" href="shared-style.css">
+  <style>
+    section ul {
+      list-style: none;
+      margin: 10px 0;
+      padding-left: 0;
+    }
+    section li {
+      padding: 5px 0;
+      color: #555;
+    }
+    section li:before {
+      content: "✓ ";
+      color: #667eea;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <nav class="top-nav">
+      <a href="../index.html" class="nav-btn">🏠 Domů</a>
+      <a href="hodina1.html" class="nav-btn">📚 Summary 1</a>
+      <a href="hodina2.html" class="nav-btn">📚 Summary 2</a>
+      <a href="hodina3.html" class="nav-btn">📚 Summary 3</a>
+      <a href="hodina4.html" class="nav-btn">📚 Summary 4</a>
+      <a href="hodina5.html" class="nav-btn">📚 Summary 5</a>
+      <a href="hodina6.html" class="nav-btn active">📚 Summary 6</a>
+      <a href="hodina7.html" class="nav-btn">📚 Summary 7</a>
+    </nav>
+
+    <header>
+      <h1>⚡ Hodina 6: JavaScript - První interaktivní prvky</h1>
+      <p class="subtitle">Event listenery, proměnné a manipulace s DOM</p>
+    </header>
+
+    <div class="download-section">
+      <h3>📥 Stáhnout hodinu</h3>
+      <p>Chceš si uložit materiály ze šesté hodiny?</p>
+      <a href="../hodina6 - javascript/index.html" download="hodina6-javascript.html" class="btn btn-download">⬇️ Stáhnout hodinu 6</a>
+    </div>
+
+    <main>
+      <section>
+        <h2>1️⃣ Co je JavaScript?</h2>
+        <p>JavaScript je programovací jazyk, který <strong>přidává interaktivitu</strong> webovým stránkám.</p>
+        <ul>
+          <li><strong>HTML</strong> = struktura (kostry stránky)</li>
+          <li><strong>CSS</strong> = vzhled (barvy, fonty, layout)</li>
+          <li><strong>JavaScript</strong> = chování (kliknutí, animace, logika)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>2️⃣ Kde píšeme JavaScript?</h2>
+        <p>JavaScript kód umístíme mezi značky <code>&lt;script&gt;</code> a <code>&lt;/script&gt;</code>:</p>
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>&lt;body&gt;
+  &lt;!-- HTML obsah --&gt;
+
+  &lt;script&gt;
+    // Zde píšeme JavaScript kód
+  &lt;/script&gt;
+&lt;/body&gt;</code></pre>
+        <p><strong>Tip:</strong> <code>&lt;script&gt;</code> dáváme <strong>před uzavírací</strong> <code>&lt;/body&gt;</code> značku.</p>
+      </section>
+
+      <section>
+        <h2>3️⃣ Získání HTML elementu</h2>
+        <p>Abychom mohli s elementem pracovat, musíme ho nejdřív <strong>"najít"</strong>.</p>
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>const tlacitko = document.getElementById('btnNext');
+const obrazek = document.getElementById('obrazek');</code></pre>
+        <p><strong>Vysvětlení:</strong></p>
+        <ul>
+          <li><code>document</code> = celá webová stránka</li>
+          <li><code>getElementById('id')</code> = najde element podle atributu <code>id</code></li>
+          <li><code>const</code> = vytvoří konstantu (proměnná, která se nemění)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>4️⃣ Event Listener - Reakce na kliknutí</h2>
+        <p>Chceme, aby se při kliknutí na tlačítko něco stalo.</p>
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>tlacitko.addEventListener('click', function() {
+  // Kód, který se spustí po kliknutí
+});</code></pre>
+        <p><strong>Co to znamená:</strong></p>
+        <ul>
+          <li><code>addEventListener</code> = "naslouchej události"</li>
+          <li><code>'click'</code> = typ události (kliknutí myší)</li>
+          <li><code>function() { ... }</code> = funkce, která se spustí</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>5️⃣ Projekt: Galerie obrázků</h2>
+        <p><strong>Co jsme vytvořili:</strong></p>
+        <ul>
+          <li>Stránku se 2 tlačítky (Předchozí, Další)</li>
+          <li>Obrázek uprostřed</li>
+          <li>Po kliknutí se obrázek mění</li>
+        </ul>
+
+        <p><strong>Jak to funguje:</strong></p>
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px; overflow-x: auto;"><code>// Pole obrázků
+const obrazky = [
+  'obrazek1.jpg',
+  'obrazek2.jpg',
+  'obrazek3.jpg'
+];
+
+// Index aktuálního obrázku
+let currentIndex = 0;
+
+// Tlačítko Další
+rightButton.addEventListener('click', function() {
+  currentIndex = currentIndex + 1;
+  
+  // Návrat na začátek
+  if (currentIndex >= obrazky.length) {
+    currentIndex = 0;
+  }
+  
+  // Změna obrázku
+  obrazekElement.src = obrazky[currentIndex];
+});</code></pre>
+      </section>
+
+      <section>
+        <h2>6️⃣ Základní pojmy</h2>
+        <ul>
+          <li><strong>Proměnná</strong> (<code>let</code>, <code>const</code>) = uložení hodnoty</li>
+          <li><strong>Pole</strong> (<code>[]</code>) = seznam hodnot</li>
+          <li><strong>Index</strong> = pozice v poli (začíná od 0!)</li>
+          <li><strong>Podmínka</strong> (<code>if</code>) = "pokud platí toto, udělej..."</li>
+          <li><strong>Funkce</strong> (<code>function</code>) = blok kódu, který se dá spustit</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>7️⃣ Rozdíl: function vs arrow function</h2>
+        <p>V JavaScriptu existují 2 způsoby, jak zapsat funkci:</p>
+        
+        <p><strong>Klasická funkce:</strong></p>
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px;"><code>addEventListener('click', function() {
+  // kód
+});</code></pre>
+
+        <p><strong>Arrow function (moderní způsob):</strong></p>
+        <pre style="background: #f4f4f4; padding: 15px; border-radius: 5px;"><code>addEventListener('click', () => {
+  // kód
+});</code></pre>
+
+        <p>Pro začátek je lepší používat <strong>klasickou funkci</strong> s <code>function()</code>.</p>
+      </section>
+
+      <section>
+        <h2>✅ Shrnutí hodiny 6</h2>
+        <ul>
+          <li>Naučili jsme se základy JavaScriptu</li>
+          <li>Použili jsme <code>getElementById</code> pro získání elementu</li>
+          <li>Přidali jsme <code>addEventListener</code> pro reakci na kliknutí</li>
+          <li>Vytvořili jsme funkční galerii obrázků</li>
+          <li>Pracovali jsme s proměnnými, poli a podmínkami</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>© 2025 | HTML Kurz - Gymnázium Havlíčkův Brod</p>
+    </footer>
+  </div>
+</body>
+</html>
